@@ -2,7 +2,6 @@
 title: "MySQL"
 linkTitle: "MySQL"
 date: 2023-03-17T00:12:00-05:00
-weight: 50
 description: >
   An example docker-compose setup for MySQL.
 ---

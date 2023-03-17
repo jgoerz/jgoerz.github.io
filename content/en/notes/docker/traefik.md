@@ -1,7 +1,6 @@
 ---
 title: "Traefik"
 linkTitle: "Traefik"
-weight: 70
 date: 2023-03-17T00:12:00-05:00
 description: >
   An example docker-compose setup for traefik.

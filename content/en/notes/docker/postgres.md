@@ -2,7 +2,6 @@
 title: "Postgres"
 linkTitle: "Postgres"
 date: 2023-03-17T00:12:00-05:00
-weight: 55
 description: >
   An example docker-compose setup for Postgres.
 ---

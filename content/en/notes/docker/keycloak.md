@@ -2,7 +2,6 @@
 title: "Keycloak"
 linkTitle: "Keycloak"
 date: 2023-03-17T00:12:00-05:00
-weight: 45
 description: >
   An IDP that can be used in production as well as for local development.
 ---
