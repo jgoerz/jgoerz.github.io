@@ -19,7 +19,7 @@ Steps to use:
 
 ## Example Docker-compose File
 
-```docker
+```yaml
 # docker-compose.yaml
 version: "3"
 

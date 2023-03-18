@@ -21,7 +21,7 @@ Steps to use:
 
 ## Example docker-compose file
 
-```docker
+```yaml
 version: "3"
 
 services:

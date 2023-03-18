@@ -19,7 +19,7 @@ Steps to use:
 
 Example docker-compose.yml
 
-```docker
+```yaml
 version: "3"
 
 services:

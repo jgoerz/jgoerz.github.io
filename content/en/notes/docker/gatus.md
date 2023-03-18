@@ -23,7 +23,7 @@ Steps to use:
 
 Example docker-compose.yml
 
-```docker
+```yaml
 # docker-compose.yaml
 
 version: "3"

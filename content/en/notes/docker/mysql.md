@@ -35,7 +35,7 @@ Steps to use:
 - You can use mysqldump to backup your data if you're doing destructive things.
   e.g. migration testing
 
-```
+```yaml
 version: "3"
 
 services:
