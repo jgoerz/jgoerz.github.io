@@ -24,8 +24,8 @@ similar architecture you might be familiar with is the [clean
 architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). 
 
 It does this by dividing the [architecture up in
-layers](https://gokit.io/faq/#design-mdash-how-is-a-go-kit-microservice-modeled).
-This note focuses on the transport layer.
+layers](https://gokit.io/faq/#design-mdash-how-is-a-go-kit-microservice-modeled):
+transport, endpoint, and service.
 
 ### Transport layer and abstraction
 
@@ -56,8 +56,9 @@ pattern](https://en.wikipedia.org/wiki/Template_method_pattern), the simplest
 way to describe it is to show an example.  Notice in the example below, that
 this method can do anything.  Its behavior is completely defined by the
 behavior of the passed in interfaces.  The only thing that is concrete is the
-order of operations: decode, transform, encode.  It's also possible to make it
-generic using generics or reflection (using `any` types).
+order of operations: decode, transform, encode.  That is the template.  It's
+also possible to make it generic using generics or reflection (using `any`
+types).
 
 ```go
 type Encoder interface {
@@ -133,6 +134,48 @@ interfaces in go-kit's documentation as well as the location in the template met
 	 to [encode the
    payload](https://github.com/go-kit/kit/blob/v0.12.0/transport/http/server.go#L132)
    from an endpoint interface type to an HTTP payload.
+
+### Endpoint layer and abstraction
+
+Endpoints are the integration layer between transports and your services.  To
+do this, go-kit defines an [endpoint
+interface](https://pkg.go.dev/github.com/go-kit/kit@v0.12.0/endpoint#Endpoint).
+
+```go
+type Endpoint func(ctx context.Context, request interface{}) (response interface{}, err error)
+// After go 1.18
+type Endpoint func(ctx context.Context, request any) (response any, err error)
+```
+
+The purpose of the endpoint is to be an adapter for data exchange between the
+transport layer and service layer. The most common way to use go-kit endpoints
+is to create a factory function that returns an `Endpoint` type. 
+
+```go
+  func makeServiceMethodEP(srv Service) endpoint.Endpoint {
+    return func(ctx context.Context, request any) (any, error) {
+
+      requ := request.(*ServiceRequest)
+      result, err := srv.ServiceMethod(ctx, requ)
+      if err != nil {
+        // https://github.com/go-kit/kit/blob/v0.12.0/transport/http/server.go#L14
+        // Do not handle errors here, handle them with errorHandler and errorEncoder
+        return nil, err
+      }
+      return result, err
+    }
+  }
+```
+
+The endpoint can now be invoked as a function passing in a context and a
+request object and returning a response object and error.  This is so common,
+that it effectively becomes boilerplate code that ought to be generated.
+
+Go-kit also defines a [Middleware
+type](https://pkg.go.dev/github.com/go-kit/kit@v0.12.0/endpoint#Middleware) for
+the endpoint layer.  This allows for behavior that can be layered or stacked
+upon each other.  The most common use case for this is metric collection or
+client side balancing/limiting type of operations.
 
 ## What does the workflow look like?
 
