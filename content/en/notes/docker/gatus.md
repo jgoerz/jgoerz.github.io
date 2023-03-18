@@ -1,10 +1,10 @@
 ---
 title: "Gatus"
 linkTitle: "Gatus"
-date: 2023-03-17T00:12:00-05:00
 description: >
   A simple tool for monitoring that also can export prometheus metrics.
 ---
+<!-- date: 2023-03-17T00:12:00-05:00 -->
 
 ## Overview
 

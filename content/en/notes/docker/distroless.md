@@ -1,10 +1,10 @@
 ---
 title: "Distroless"
 linkTitle: "Distroless"
-date: 2023-03-17T00:12:00-05:00
 description: >
   Smaller, more secure containers using distroless from Google.
 ---
+<!-- date: 2023-03-17T00:12:00-05:00 -->
 
 ## Go
 

@@ -1,10 +1,10 @@
 ---
 title: "Prometheus"
 linkTitle: "Prometheus"
-date: 2023-03-17T00:12:00-05:00
 description: >
   An example docker setup for prometheus.
 ---
+<!-- date: 2023-03-17T00:12:00-05:00 -->
 
 ## Overview
 

@@ -1,10 +1,10 @@
 ---
 title: "Postgres"
 linkTitle: "Postgres"
-date: 2023-03-17T00:12:00-05:00
 description: >
   An example docker-compose setup for Postgres.
 ---
+<!-- date: 2023-03-17T00:12:00-05:00 -->
 
 ## Overview
 
@@ -73,3 +73,4 @@ networks:
 <!-- or update date). -->
 
 1. "Container Deployment."  pgadmin.org, March 17, 2023, [URL](https://www.pgadmin.org/docs/pgadmin4/6.21/container_deployment.html)
+1. Salimon, Samuel.  "Setting up PgAdmin Docker Connection: 3 Critical Steps." February 15th, 2022, [URL](https://hevodata.com/learn/pgadmin-docker)
