@@ -49,7 +49,7 @@ services:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/initdb.d:/docker-entrypoint-initdb.d
       - ./mysql/conf.d:/etc/mysql/conf.d
-      # - ./internal/testdata/mysql/secrets:/run/secrets
+      # - ./mysql/secrets:/run/secrets
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: app_user
