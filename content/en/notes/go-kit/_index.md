@@ -2,7 +2,7 @@
 ---
 title: "go-kit"
 linkTitle: "go-kit"
-weight: 20
+weight: 30
 description: >
   Examples and notes for go-kit and microservices.
 ---
