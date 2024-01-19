@@ -1,8 +1,7 @@
-
 ---
 title: "terraform"
 linkTitle: "terraform"
-weight: 20
+weight: 80
 description: >
   Examples and notes for terraform.
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Data Oriented Design"
 linkTitle: "data oriented design"
-weight: 10
+weight: 30
 description: >
   Notes on data oriented design.
 ---

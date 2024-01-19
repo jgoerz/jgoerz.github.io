@@ -1,7 +1,7 @@
 ---
 title: "docker"
 linkTitle: "docker"
-weight: 10
+weight: 40
 description: >
   Example use of docker for common development tools.
 ---
