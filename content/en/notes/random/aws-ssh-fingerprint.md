@@ -1,6 +1,6 @@
 ---
 title: "SSH key fingerprint"
-date: 2024-01-26T10:10:00-05:00
+date: 2023-08-10T10:10:00-05:00
 weight: 30
 ---
 
