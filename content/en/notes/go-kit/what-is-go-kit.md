@@ -95,7 +95,7 @@ HTTP request start
       =>  DecodeRequestFunc called: decode(ctx, requ any) (resp any, err error)
       =>  Endpoint          called:     ep(ctx, requ any) (resp any, err error)
       =>  After hook
-      =>  EncodeResponseFunc called: decode(ctx, requ any) (resp any, err error)
+      =>  EncodeResponseFunc called: encode(ctx, requ any) (resp any, err error)
       =>  Finalizers called
     => middleware ServeHTTP() chain returns (if no early return)
   => HTTP Server exit point
