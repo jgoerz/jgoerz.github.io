@@ -1,5 +1,5 @@
 ---
-title: "SSH Converstions"
+title: "SSH Conversions"
 date: 2024-06-10T10:10:00-05:00
 weight: 30
 ---
