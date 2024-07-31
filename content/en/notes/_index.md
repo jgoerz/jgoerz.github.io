@@ -1,4 +1,3 @@
-
 ---
 title: "Notes"
 linkTitle: "Notes"
